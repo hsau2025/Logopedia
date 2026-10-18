@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hsau Logopèdia: acompanyament logopèdic infantil a domicili al Baix Llobregat.">
+  <title>Hsau Logopèdia · Acompanyar per fer-se entendre</title>
+  <style>
+    :root { --ink:#49352b; --terracotta:#d97857; --peach:#f5c6aa; --cream:#fff9ef; --sand:#f4e4ce; --sage:#9fac8b; --deep-sage:#5f705c; --white:#fffdf8; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--cream); font:16px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    h1,h2,h3,p { margin-top:0; }
+    h1,h2,h3 { font-family:Georgia,"Times New Roman",serif; font-weight:400; line-height:1.05; }
+    a { color:inherit; text-decoration:none; }
+    .wrap { width:min(1120px,calc(100% - 40px)); margin:auto; }
+    .topbar { background:var(--deep-sage); color:#fff9ef; padding:10px 0; font-size:.9rem; text-align:center; }
+    header { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { display:flex; align-items:center; gap:11px; font-family:Georgia,serif; font-size:1.35rem; }
+    .brand-logo { width:46px; height:46px; object-fit:contain; }
+    nav { display:flex; gap:24px; font-size:.94rem; }
+    nav a:hover { color:var(--terracotta); }
+    .hero { position:relative; overflow:hidden; padding:78px 0; background:linear-gradient(115deg,#f9dcc5 0%,#fff9ef 62%,#e7eddc 100%); }
+    .hero::before { content:""; position:absolute; width:390px; height:390px; left:-210px; bottom:-255px; border-radius:50%; background:#efaa86; opacity:.5; }
+    .hero::after { content:""; position:absolute; width:210px; height:290px; right:4%; bottom:-170px; border-radius:55% 45% 50% 50%; border:2px solid #88a075; transform:rotate(31deg); opacity:.45; }
+    .hero-grid { position:relative; z-index:1; display:grid; grid-template-columns:1fr .92fr; align-items:center; gap:58px; }
+    .eyebrow { color:var(--deep-sage); font-size:.78rem; font-weight:750; letter-spacing:.14em; text-transform:uppercase; }
+    h1 { font-size:clamp(3.3rem,7vw,6.5rem); letter-spacing:-.055em; max-width:760px; margin:16px 0 24px; }
+    .lead { max-width:555px; font-size:1.15rem; }
+    .button { display:inline-block; margin-top:15px; padding:14px 22px; border-radius:99px; background:var(--terracotta); color:white; font-weight:700; box-shadow:0 8px 18px #9a563342; }
+    .button:hover { background:#bf6245; transform:translateY(-1px); }
+    .hero-photo { height:455px; overflow:hidden; border-radius:48% 52% 45% 55% / 45% 43% 57% 55%; background:var(--sage); }
+    .hero-photo img { display:block; width:100%; height:100%; object-fit:cover; object-position:38% center; }
+    section { padding:98px 0; }
+    .intro { display:grid; grid-template-columns:1fr 1fr; gap:90px; align-items:start; }
+    .intro-photo { grid-column:1 / -1; height:460px; margin-top:-35px; overflow:hidden; border-radius:30px; box-shadow:0 18px 38px #49352b1f; }
+    .intro-photo img { display:block; width:100%; height:100%; object-fit:cover; }
+    .about { background:#fffdf8; }
+    .about-grid { display:grid; grid-template-columns:.72fr 1.28fr; gap:70px; align-items:center; }
+    .about-mark { min-height:330px; display:grid; place-items:center; padding:42px; border-radius:42% 58% 50% 50% / 47% 43% 57% 53%; background:#e6eddb; }
+    .about-mark img { width:min(210px,100%); height:auto; }
+    .about-list { margin:25px 0; padding:0; list-style:none; }
+    .about-list li { margin:9px 0; padding-left:22px; position:relative; }
+    .about-list li::before { content:"•"; position:absolute; left:2px; color:var(--terracotta); font-size:1.3rem; line-height:1; }
+    h2 { font-size:clamp(2.35rem,4vw,4rem); letter-spacing:-.04em; margin-bottom:20px; }
+    .pill { display:inline-block; padding:8px 13px; background:var(--sand); border-radius:99px; font-size:.85rem; margin:4px 4px 0 0; }
+    .services { background:var(--sand); }
+    .section-heading { max-width:620px; margin-bottom:42px; }
+    .cards { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+    .card { min-height:245px; padding:25px; border-radius:20px; background:var(--white); display:flex; flex-direction:column; }
+    .card:nth-child(2) { background:#e9d9bd; } .card:nth-child(3) { background:#dce7d3; } .card:nth-child(4) { background:#f5c6aa; }
+    .card-icon { font-size:1.75rem; margin-bottom:auto; } .card h3 { font-size:1.55rem; margin:20px 0 8px; }
+    .lsc { background:#e6eddb; }
+    .lsc-intro { display:grid; grid-template-columns:1fr 1.08fr; gap:58px; align-items:center; margin-bottom:38px; }
+    .lsc-photo { position:relative; overflow:hidden; min-height:390px; border-radius:30px; box-shadow:0 18px 38px #5f705c2e; }
+    .lsc-photo img { display:block; width:100%; height:100%; min-height:390px; object-fit:cover; }
+    .online-badge { position:absolute; left:20px; bottom:20px; padding:10px 16px; border-radius:99px; background:var(--terracotta); color:#fff; font-weight:750; box-shadow:0 8px 18px #49352b35; }
+    .lsc-values { list-style:none; padding:0; margin:0 0 20px; }
+    .lsc-values .card h3 { margin-top:0; }
+    .materials { background:var(--sand); }
+    .materials-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:70px; align-items:center; }
+    .access-panel { padding:38px; border-radius:26px; background:var(--white); box-shadow:0 14px 34px #49352b18; }
+    .lock-mark { display:grid; place-items:center; width:58px; height:58px; margin-bottom:20px; border-radius:50%; background:#e6eddb; color:var(--deep-sage); font-size:1.6rem; }
+    .access-panel label { display:block; margin:22px 0 7px; font-weight:700; }
+    .access-row { display:grid; grid-template-columns:1fr auto; gap:10px; }
+    .access-row input { min-width:0; padding:13px 15px; border:1px solid #cbbca7; border-radius:12px; background:#fff; color:var(--ink); font:inherit; }
+    .access-row button { padding:13px 18px; border:0; border-radius:12px; background:var(--deep-sage); color:#fff; font-weight:700; opacity:.72; cursor:not-allowed; }
+    .ownership-note { margin:20px 0 0; padding-top:18px; border-top:1px solid #ded2c0; font-size:.9rem; }
+    .process { display:grid; grid-template-columns:.8fr 1.2fr; gap:70px; }
+    .steps { border-top:1px solid #cbbca7; }
+    .step { display:grid; grid-template-columns:70px 1fr; gap:16px; padding:21px 0; border-bottom:1px solid #cbbca7; }
+    .step span { color:var(--terracotta); font-weight:700; } .step h3 { margin:0 0 4px; font-size:1.4rem; }
+    .quote { position:relative; background:var(--deep-sage); color:#fff9ef; border-radius:38px 38px 38px 8px; padding:51px; }
+    .quote::before { content:"“"; position:absolute; top:18px; left:29px; color:#f1b490; font:6rem/1 Georgia,serif; }
+    .quote p { position:relative; font:1.55rem/1.42 Georgia,serif; }
+    .contact { background:#f1b490; }
+    .family-section { padding-top:10px; }
+    .family-grid { display:grid; grid-template-columns:1.08fr .92fr; gap:66px; align-items:center; background:#e6eddb; border-radius:30px; overflow:hidden; }
+    .family-photo { min-height:410px; }
+    .family-photo img { display:block; width:100%; height:100%; min-height:410px; object-fit:cover; }
+    .family-copy { padding:45px 48px 45px 0; }
+    .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
+    .contact-box { padding:30px; border-radius:20px; background:var(--white); }
+    .contact-box a { display:block; margin:12px 0; font-size:1.1rem; font-weight:650; }
+    .contact-content { display:grid; grid-template-columns:1fr 132px; gap:22px; align-items:center; }
+    .contact-logo { width:132px; height:132px; object-fit:contain; }
+    footer { padding:28px 0; background:#473c30; color:#fff9ef; font-size:.9rem; }
+    @media (max-width:780px) { nav { display:none; } .hero { padding:65px 0; } .hero-grid,.intro,.about-grid,.process,.contact-grid,.family-grid,.lsc-intro,.materials-grid { grid-template-columns:1fr; gap:38px; } .hero-photo { height:380px; max-width:430px; } .intro-photo { height:320px; margin-top:0; } .about-mark { min-height:240px; max-width:380px; } .family-copy { padding:0 30px 38px; } .family-photo,.family-photo img { min-height:290px; } .lsc-photo,.lsc-photo img { min-height:300px; } .cards { grid-template-columns:1fr 1fr; } section { padding:65px 0; } }
+    @media (max-width:480px) { .contact-content { grid-template-columns:1fr; } .contact-logo { width:112px; height:112px; } }
+    @media (max-width:450px) { .cards { grid-template-columns:1fr; } h1 { font-size:3.5rem; } .quote { padding:40px 28px; } }
+  </style>
+</head>
+<body>
+  <div class="topbar">Logopèdia infantil a domicili · Baix Llobregat</div>
+  <div class="wrap"><header><a class="brand" href="#inici"><img class="brand-logo" src="assets/logo-transparent.png" alt="Logotip Hsau Logopèdia">Hsau Logopèdia</a><nav><a href="#sobre-mi">Sobre mi</a><a href="#serveis">Serveis</a><a href="#lsc">LSC</a><a href="#materials">Materials</a><a href="#proces">El procés</a><a href="#contacte">Contacte</a></nav></header></div>
+  <main>
+    <section class="hero" id="inici"><div class="wrap hero-grid"><div><div class="eyebrow">Logopèdia a domicili · Baix Llobregat</div><h1>Cada infant té la seva manera de fer-se entendre.</h1><p class="lead">Acompanyo infants i famílies al seu entorn habitual, amb una intervenció propera, personalitzada i coordinada amb la família.</p><a class="button" href="#contacte">Demanar una valoració →</a></div><div class="hero-photo"><img src="assets/helena-dunes.jpeg" alt="Helena Collado, logopeda de Hsau Logopèdia, a les dunes"></div></div></section>
+    <section><div class="wrap intro"><div><div class="eyebrow">Una mirada propera</div><h2>La comunicació floreix quan hi ha calma.</h2></div><div><p>Treballar a domicili em permet conèixer l’infant en un espai segur i convertir moments del dia a dia en oportunitats per comunicar-se, jugar i aprendre.</p><p>Amb escolta, joc i eines pràctiques, construïm un camí compartit amb la família.</p><div><span class="pill">Al vostre domicili</span><span class="pill">Mirada respectuosa</span><span class="pill">Orientació familiar</span></div></div><div class="intro-photo"><img src="assets/comunicacio-calma-helena.png" alt="L’Helena compartint una activitat de comunicació i joc amb un infant en un entorn tranquil"></div></div></section>
+<section class="about" id="sobre-mi"><div class="wrap about-grid"><div class="about-mark"><img src="assets/logo-transparent.png" alt="Logotip Hsau Logopèdia"></div><div><div class="eyebrow">Sobre mi</div><h2>Experiència, escolta i compromís amb cada infant.</h2><p>Soc l’Helena Collado, logopeda, mestra d’Audició i Llenguatge i intèrpret de Llengua de Signes. Fa més de quinze anys que acompanyo infants, famílies i centres educatius.</p><ul class="about-list"><li>Diplomada en Logopèdia per la Universitat Autònoma de Barcelona.</li><li>Col·legiada núm. 3337 del Col·legi de Logopedes de Catalunya.</li><li>Experiència en centres educatius, serveis especialitzats i atenció logopèdica individual.</li><li>Especial sensibilitat per la comunicació, la inclusió i el treball compartit amb la família.</li></ul><a class="button" href="cv-public-helena-collado.pdf" download="CV-Helena-Collado.pdf">Descarrega el meu currículum →</a></div></div></section>
+    <section class="services" id="serveis"><div class="wrap"><div class="section-heading"><div class="eyebrow">Com et puc ajudar</div><h2>Un acompanyament que s’adapta a vosaltres.</h2></div><div class="cards"><article class="card"><div class="card-icon">◌</div><h3>Parla</h3><p>Pronunciació, articulació i claredat dels sons.</p></article><article class="card"><div class="card-icon">⌇</div><h3>Llenguatge</h3><p>Comprensió i expressió oral i escrita.</p></article><article class="card"><div class="card-icon">⌁</div><h3>Aprenentatge</h3><p>Suport en lectura, escriptura i habilitats acadèmiques.</p></article><article class="card"><div class="card-icon">♡</div><h3>Famílies</h3><p>Orientacions senzilles per acompanyar també des de casa.</p></article></div></div></section>
+    <section class="lsc" id="lsc" aria-labelledby="lsc-title"><div class="wrap"><div class="lsc-intro"><div><div class="eyebrow">LSC en línia · Per a professionals</div><h2 id="lsc-title">Un espai per signar, compartir i créixer.</h2><p>Sessions en línia d’acompanyament en Llengua de Signes Catalana (LSC) per a professionals que ja en tenen coneixements previs i volen guanyar confiança en la comunicació amb infants sords.</p><p>Connecta’t des d’on siguis per practicar, compartir situacions reals i continuar avançant amb un acompanyament proper i adaptat al teu context professional.</p><p><strong>Aquest servei no és un curs inicial d’LSC ni substitueix la formació impartida per professionals sords.</strong></p></div><div class="lsc-photo"><img src="assets/sessions-lsc-online-helena.png" alt="Dos professionals conversant en Llengua de Signes Catalana durant una sessió en línia"><span class="online-badge">● Sessions 100% en línia</span></div></div><ul class="cards lsc-values"><li class="card"><h3>Practicar conversa</h3><p>Conversa en LSC per guanyar fluïdesa i confiança en situacions vinculades a la teva pràctica professional.</p></li><li class="card"><h3>Compartir experiències</h3><p>Un espai d’escolta per posar en comú vivències i estratègies de treball amb infants sords, preservant-ne la privacitat.</p></li><li class="card"><h3>Resoldre dubtes</h3><p>Acompanyament per explorar dubtes que sorgeixen en la comunicació quotidiana i buscar maneres d’abordar-los.</p></li><li class="card"><h3>Trobar recursos útils</h3><p>Orientació per identificar i seleccionar els recursos més adequats a les necessitats dels infants i al teu context professional.</p></li></ul><a class="button" href="#contacte">Parlem del teu acompanyament en LSC →</a></div></section>
+    <section id="proces"><div class="wrap process"><div><div class="eyebrow">Pas a pas</div><h2>Un procés senzill i compartit.</h2><p>Sense presses i amb tota la informació que necessiteu per decidir amb tranquil·litat.</p></div><div class="steps"><article class="step"><span>01</span><div><h3>Ens coneixem</h3><p>Parlem de les vostres inquietuds i del vostre dia a dia.</p></div></article><article class="step"><span>02</span><div><h3>Fem una valoració</h3><p>Observem, escoltem i identifiquem les necessitats de l’infant.</p></div></article><article class="step"><span>03</span><div><h3>Preparem un pla</h3><p>Definim objectius realistes i una proposta personalitzada.</p></div></article><article class="step"><span>04</span><div><h3>Us acompanyo</h3><p>Compartim l’evolució i recursos útils per continuar a casa.</p></div></article></div></div></section>
+    <section class="family-section"><div class="wrap family-grid"><div class="family-photo"><img src="assets/sessio-familia.webp" alt="Una professional, una mare i un infant jugant plegats a taula"></div><div class="family-copy"><div class="eyebrow">A casa, junts</div><h2>El procés també es construeix en família.</h2><p>Quan la família participa, els aprenentatges s’integren amb més naturalitat en les rutines quotidianes.</p></div></div></section>
+    <section><div class="wrap quote"><p>“Cada paraula, cada gest i cada silenci són una porta per entendre’ns millor.”</p><small>Hsau Logopèdia</small></div></section>
+    <section class="contact" id="contacte"><div class="wrap contact-grid"><div><div class="eyebrow">Parlem-ne</div><h2>Comencem amb una conversa tranquil·la.</h2><p>Explica’m què us preocupa. Mirarem juntes quin pot ser el millor primer pas.</p></div><div class="contact-box"><div class="contact-content"><div><h3>Contacte</h3><a href="https://wa.me/34649608230">WhatsApp · 649 608 230</a><a href="mailto:hsau2025@gmail.com">hsau2025@gmail.com</a><a href="https://www.instagram.com/hsau_logopedia/" target="_blank" rel="noopener noreferrer">Instagram · @hsau_logopedia</a></div><img class="contact-logo" src="assets/logo-transparent.png" alt="Logotip Hsau Logopèdia"></div><p><small>Quan em contactis, no incloguis informació mèdica sensible. La política de privacitat s’afegirà abans de publicar la web.</small></p></div></div></section>
+    <section class="materials" id="materials" aria-labelledby="materials-title"><div class="wrap materials-grid"><div><div class="eyebrow">Recursos d’ús privat</div><h2 id="materials-title">Materials per continuar avançant.</h2><p>Aquest espai reunirà recursos i materials d’acompanyament per a les persones que participin en les sessions.</p><p>L’accés estarà vinculat a una carpeta privada de Google Drive i només estarà disponible per a les persones autoritzades.</p></div><div class="access-panel"><div class="lock-mark" aria-hidden="true">🔒</div><h3>Accés als materials</h3><p>Introdueix el teu codi personal per accedir a l’espai privat.</p><label for="access-code">Codi d’accés</label><div class="access-row"><input id="access-code" type="password" placeholder="Escriu el teu codi" disabled><button type="button" disabled>Accedir</button></div><p class="ownership-note">Aquests materials són propietat de <strong>@Hsau_Logopèdia</strong>. Contacta amb la responsable per sol·licitar-hi accés.</p></div></div></section>
+  </main>
+  <footer><div class="wrap">Hsau Logopèdia · Helena Collado Arasa · Baix Llobregat</div></footer>
+</body>
+</html>
+
